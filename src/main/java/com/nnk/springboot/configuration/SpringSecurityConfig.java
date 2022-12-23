@@ -63,6 +63,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 				.defaultSuccessUrl("/bidList/list", true).and().logout().logoutUrl("/app-logout")
 				.permitAll().logoutSuccessUrl("/login").invalidateHttpSession(true)
 				.deleteCookies("JSESSIONID")
+		;
 //				.addLogoutHandler((request, response, auth) -> {
 //					try {
 //						request.logout();
@@ -70,7 +71,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 //						logger.error(e.getMessage());
 //					}
 //				})
-		;
 
 //		.loginPage("/login")
 //		.defaultSuccessUrl("/home")
