@@ -13,6 +13,8 @@
 		</div>
 
 		<div class="row">
+		<h4 th:text="${bidListDto}"></h4>
+		<h4 th:text="${bidListDto.bidListId}"></h4>
 			<form action="#"
 				th:action="@{/bidList/update/{id}(id=${bidListDto.bidListId})}"
 				th:object="${bidListDto}" method="post"
