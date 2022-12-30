@@ -30,7 +30,7 @@ public class BidListController {
 	}
 
 	@GetMapping("/bidList/add")
-	public String addBidForm(BidListDto bidListDto) {
+	public String addBidForm(BidListDto bidListDto, Model model) {
 		return "bidList/add";
 	}
 
@@ -46,16 +46,17 @@ public class BidListController {
 	}
 
 	@GetMapping("/bidList/update/{id}")
-	public String showUpdateForm(@PathVariable("id") Integer id, Model model) {
+	public String showUpdateForm(@PathVariable("id") Integer id, BidListDto bidListDto, Model model) {
 		model.addAttribute("bidListDto", bidListService.getById(id));
 		return "bidList/update";
 	}
 
 	@PostMapping("/bidList/update/{id}")
-	public String updateBid(@PathVariable("id") Integer id, @Valid BidListDto bidListDto,
-			BindingResult result, Model model) {
+	public String updateBid(@PathVariable("id") Integer id, @Valid BidListDto bidListDto, BindingResult result,
+			Model model) {
 		if (result.hasErrors()) {
-			return "bidList/update/"+id;
+			model.addAttribute("bidListDto", bidListDto);
+			return "bidList/update";
 		} else {
 			bidListService.updateById(id, bidListDto);
 		}

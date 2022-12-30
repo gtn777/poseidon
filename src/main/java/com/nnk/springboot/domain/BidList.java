@@ -13,7 +13,6 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "BidList")
-@NoArgsConstructor
 public class BidList {
 	
 	public BidList(String account, String type, Double bidQuantity) {
@@ -23,6 +22,11 @@ public class BidList {
 		this.bidQuantity = bidQuantity;
 	}
 	
+
+	public BidList() {
+		super();
+	}
+
 
 	@Id
 	@Column(name = "BidListId")
