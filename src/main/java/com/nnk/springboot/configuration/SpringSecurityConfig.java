@@ -56,14 +56,18 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 
-//		http.csrf().disable().authorizeRequests().anyRequest().permitAll();
+		http.csrf().disable().authorizeRequests().anyRequest().permitAll();
 
-		http.csrf().disable().authorizeRequests().antMatchers("/user/**").hasAuthority("ADMIN")
-				.anyRequest().authenticated().and().formLogin().permitAll()
-				.defaultSuccessUrl("/bidList/list", true).and().logout().logoutUrl("/app-logout")
-				.permitAll().logoutSuccessUrl("/login").invalidateHttpSession(true)
-				.deleteCookies("JSESSIONID")
-		;
+//		http.csrf().disable().authorizeRequests().antMatchers("/user/**").hasAuthority("ADMIN")
+//				.anyRequest().authenticated().and().formLogin().permitAll()
+//				.defaultSuccessUrl("/bidList/list", true).and().logout().logoutUrl("/app-logout")
+//				.permitAll().logoutSuccessUrl("/login").invalidateHttpSession(true)
+//				.deleteCookies("JSESSIONID")
+//		;
+		
+		
+		
+		
 //				.addLogoutHandler((request, response, auth) -> {
 //					try {
 //						request.logout();

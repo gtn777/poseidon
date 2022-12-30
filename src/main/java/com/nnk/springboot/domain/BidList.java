@@ -9,8 +9,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.NoArgsConstructor;
+
 @Entity
 @Table(name = "BidList")
+@NoArgsConstructor
 public class BidList {
 	
 	public BidList(String account, String type, Double bidQuantity) {
@@ -19,6 +22,7 @@ public class BidList {
 		this.type = type;
 		this.bidQuantity = bidQuantity;
 	}
+	
 
 	@Id
 	@Column(name = "BidListId")
