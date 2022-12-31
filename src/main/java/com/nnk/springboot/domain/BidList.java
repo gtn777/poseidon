@@ -12,12 +12,9 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "BidList")
 public class BidList {
-	
-	public BidList(String account, String type, Double bidQuantity) {
+
+	public BidList() {
 		super();
-		this.account = account;
-		this.type = type;
-		this.bidQuantity = bidQuantity;
 	}
 
 	@Id

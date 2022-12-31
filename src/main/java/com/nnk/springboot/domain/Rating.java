@@ -10,6 +10,10 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Rating")
 public class Rating {
+	
+	public Rating() {
+		super();
+	}
 
 	public Rating(String moodysRating, String sandPRating, String fitchRating, Integer orderNumber) {
 		super();
@@ -17,10 +21,6 @@ public class Rating {
 		this.sandPRating = sandPRating;
 		this.fitchRating = fitchRating;
 		this.orderNumber = orderNumber;
-	}
-
-	public Rating() {
-		super();
 	}
 
 	@Id

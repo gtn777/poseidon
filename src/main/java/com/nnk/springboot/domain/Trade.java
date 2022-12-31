@@ -19,6 +19,10 @@ public class Trade {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer tradeId;
 
+	public Trade() {
+		super();
+	}
+	
 	public Trade(String account, String type) {
 		super();
 		this.account = account;
