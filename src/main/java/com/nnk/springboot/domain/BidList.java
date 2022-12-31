@@ -16,6 +16,13 @@ public class BidList {
 	public BidList() {
 		super();
 	}
+	
+	public BidList(String account, String type, Double bidQuantity) {
+		super();
+		this.account = account;
+		this.type = type;
+		this.bidQuantity = bidQuantity;
+	}
 
 	@Id
 	@Column(name = "BidListId")
