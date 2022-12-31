@@ -7,11 +7,12 @@ import javax.validation.constraints.Size;
 
 public class BidListDto {
 
-	private Integer bidListId;
 
 	public BidListDto() {
 		super();
 	}
+
+	private Integer bidListId;
 
 	@NotBlank(message = "Account is mandatory.")
 	@Size(min = 1, max = 20, message = "Type must be between 1 and 20 characters.")

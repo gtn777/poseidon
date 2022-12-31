@@ -9,24 +9,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.NoArgsConstructor;
-
 @Entity
 @Table(name = "BidList")
 public class BidList {
-	
-	public BidList(String account, String type, Double bidQuantity) {
-		super();
-		this.account = account;
-		this.type = type;
-		this.bidQuantity = bidQuantity;
-	}
-	
 
 	public BidList() {
 		super();
 	}
-
 
 	@Id
 	@Column(name = "BidListId")

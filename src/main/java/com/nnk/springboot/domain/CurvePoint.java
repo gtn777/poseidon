@@ -12,7 +12,10 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "CurvePoint")
 public class CurvePoint {
-	// TODO: Map columns in data table CURVEPOINT with corresponding java fields
+
+	public CurvePoint() {
+		super();
+	}
 
 	public CurvePoint(Integer curveId, Double term, Double value) {
 		super();

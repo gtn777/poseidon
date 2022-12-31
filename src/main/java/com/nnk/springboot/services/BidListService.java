@@ -31,18 +31,24 @@ public class BidListService {
 	}
 
 	public BidListDto getById(int id) {
-		return this.modelMapper.map(bidListRepository.findById(id).get(), BidListDto.class);
+		BidListDto returnValue = this.modelMapper.map(bidListRepository.findById(id).get(),
+				BidListDto.class);
+		return returnValue;
 	}
 
 	public BidListDto updateById(int id, BidListDto dto) {
-		BidList bidListUpdated = this.modelMapper.map(dto,  BidList.class);
+		BidList bidListUpdated = this.modelMapper.map(dto, BidList.class);
 		bidListUpdated.setBidListId(id);
 		return this.modelMapper.map(bidListRepository.save(bidListUpdated), BidListDto.class);
 	}
 
-	public Object create(BidListDto dto) {
-		return bidListRepository.save(this.modelMapper.map(dto, BidList.class));
+	public BidListDto create(BidListDto dto) {
+		return this.modelMapper.map(
+				bidListRepository.save(this.modelMapper.map(dto, BidList.class)), BidListDto.class);
 	}
-	
+
+	public void delete(int id) {
+		bidListRepository.deleteById(id);
+	}
 
 }
