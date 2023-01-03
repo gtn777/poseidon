@@ -1,0 +1,460 @@
+2023-01-03 05:20:14.114  INFO 32495 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2023-01-03 05:20:14.114  INFO 32495 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2023-01-03 05:20:14.120  INFO 32495 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 6 ms
+2023-01-03 05:22:44.437  INFO 32495 --- [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-01-03 05:22:44.438  INFO 32495 --- [RMI TCP Connection(6)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@457b9d31: startup date [Tue Jan 03 05:19:49 CET 2023]; root of context hierarchy
+2023-01-03 05:22:44.439  INFO 32495 --- [RMI TCP Connection(6)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2023-01-03 05:22:44.439  INFO 32495 --- [RMI TCP Connection(6)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2023-01-03 05:22:44.440  INFO 32495 --- [RMI TCP Connection(6)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-03 05:22:44.441  INFO 32495 --- [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-03 05:22:44.442  INFO 32495 --- [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-03 05:22:48.508  INFO 33261 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2f125b28: startup date [Tue Jan 03 05:22:48 CET 2023]; root of context hierarchy
+2023-01-03 05:22:49.079  INFO 33261 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f2bbe87d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-03 05:22:49.266  INFO 33261 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-03 05:22:49.266  INFO 33261 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.32
+2023-01-03 05:22:49.271  INFO 33261 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+2023-01-03 05:22:49.300  INFO 33261 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-03 05:22:49.300  INFO 33261 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 792 ms
+2023-01-03 05:22:49.339  INFO 33261 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2023-01-03 05:22:49.339  INFO 33261 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2023-01-03 05:22:49.339  INFO 33261 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2023-01-03 05:22:49.339  INFO 33261 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2023-01-03 05:22:49.340  INFO 33261 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2023-01-03 05:22:49.340  INFO 33261 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'logFilter' to: [/*]
+2023-01-03 05:22:49.340  INFO 33261 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2023-01-03 05:22:49.340  INFO 33261 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2023-01-03 05:22:49.353  WARN 33261 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [1535F7EAF6246601D731138B77BD2761]
+2023-01-03 05:22:49.355 DEBUG 33261 --- [localhost-startStop-1] o.s.w.f.CommonsRequestLoggingFilter      : Initializing filter 'logFilter'
+2023-01-03 05:22:49.355 DEBUG 33261 --- [localhost-startStop-1] o.s.w.f.CommonsRequestLoggingFilter      : Filter 'logFilter' configured successfully
+2023-01-03 05:22:49.382  INFO 33261 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-03 05:22:49.504  INFO 33261 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-03 05:22:49.507  INFO 33261 --- [restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/home/gpi/poseidon/target/classes/schema.sql]
+2023-01-03 05:22:49.685  INFO 33261 --- [restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/home/gpi/poseidon/target/classes/schema.sql] in 178 ms.
+2023-01-03 05:22:49.689  INFO 33261 --- [restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/home/gpi/poseidon/target/classes/data.sql]
+2023-01-03 05:22:49.714  INFO 33261 --- [restartedMain] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/home/gpi/poseidon/target/classes/data.sql] in 25 ms.
+2023-01-03 05:22:49.757  INFO 33261 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2023-01-03 05:22:50.111  INFO 33261 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-03 05:22:50.428  INFO 33261 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c3c10ef, org.springframework.security.web.context.SecurityContextPersistenceFilter@37841c7c, org.springframework.security.web.header.HeaderWriterFilter@5d4f3788, org.springframework.security.web.authentication.logout.LogoutFilter@19b59cc8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@73a5fe6f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@74cd3c59, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3e89da2a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c5bf50c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@177ca5e1, org.springframework.security.web.session.SessionManagementFilter@3008efe0, org.springframework.security.web.access.ExceptionTranslationFilter@5c21f958, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@573ac5ed]
+2023-01-03 05:22:50.463  INFO 33261 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-01-03 05:22:50.556  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2f125b28: startup date [Tue Jan 03 05:22:48 CET 2023]; root of context hierarchy
+2023-01-03 05:22:50.577  WARN 33261 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-03 05:22:50.593  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/bidList/list],methods=[GET]}" onto public java.lang.String com.nnk.springboot.controllers.BidListController.home(org.springframework.ui.Model)
+2023-01-03 05:22:50.593  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/bidList/update/{id}],methods=[POST]}" onto public java.lang.Object com.nnk.springboot.controllers.BidListController.updateBid(java.lang.Integer,com.nnk.springboot.dto.BidListDto,org.springframework.validation.BindingResult)
+2023-01-03 05:22:50.593  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/bidList/delete/{id}],methods=[GET]}" onto public java.lang.String com.nnk.springboot.controllers.BidListController.deleteBid(java.lang.Integer,org.springframework.ui.Model)
+2023-01-03 05:22:50.593  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/bidList/update/{id}],methods=[GET]}" onto public java.lang.String com.nnk.springboot.controllers.BidListController.showUpdateForm(java.lang.Integer,com.nnk.springboot.dto.BidListDto,org.springframework.ui.Model)
+2023-01-03 05:22:50.594  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/bidList/add],methods=[GET]}" onto public java.lang.String com.nnk.springboot.controllers.BidListController.addBidForm(com.nnk.springboot.dto.BidListDto,org.springframework.ui.Model)
+2023-01-03 05:22:50.594  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/bidList/validate],methods=[POST]}" onto public java.lang.String com.nnk.springboot.controllers.BidListController.validate(com.nnk.springboot.dto.BidListDto,org.springframework.validation.BindingResult)
+2023-01-03 05:22:50.594  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/curvePoint/list]}" onto public java.lang.String com.nnk.springboot.controllers.CurveController.home(org.springframework.ui.Model)
+2023-01-03 05:22:50.594  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/curvePoint/update/{id}],methods=[POST]}" onto public java.lang.String com.nnk.springboot.controllers.CurveController.updateBid(java.lang.Integer,com.nnk.springboot.domain.CurvePoint,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2023-01-03 05:22:50.595  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/curvePoint/delete/{id}],methods=[GET]}" onto public java.lang.String com.nnk.springboot.controllers.CurveController.deleteBid(java.lang.Integer,org.springframework.ui.Model)
+2023-01-03 05:22:50.595  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/curvePoint/update/{id}],methods=[GET]}" onto public java.lang.String com.nnk.springboot.controllers.CurveController.showUpdateForm(java.lang.Integer,org.springframework.ui.Model)
+2023-01-03 05:22:50.595  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/curvePoint/add],methods=[GET]}" onto public java.lang.String com.nnk.springboot.controllers.CurveController.addBidForm(com.nnk.springboot.domain.CurvePoint)
+2023-01-03 05:22:50.595  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/curvePoint/validate],methods=[POST]}" onto public java.lang.String com.nnk.springboot.controllers.CurveController.validate(com.nnk.springboot.domain.CurvePoint,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2023-01-03 05:22:50.595  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.nnk.springboot.controllers.HomeController.home(org.springframework.ui.Model)
+2023-01-03 05:22:50.596  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/home]}" onto public java.lang.String com.nnk.springboot.controllers.HomeController.adminHome(org.springframework.ui.Model)
+2023-01-03 05:22:50.597  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/app/secure/article-details],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.nnk.springboot.controllers.LoginController.getAllUserArticles()
+2023-01-03 05:22:50.597  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/app/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.nnk.springboot.controllers.LoginController.login()
+2023-01-03 05:22:50.597  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/app/error],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.nnk.springboot.controllers.LoginController.error()
+2023-01-03 05:22:50.597  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rating/list]}" onto public java.lang.String com.nnk.springboot.controllers.RatingController.home(org.springframework.ui.Model)
+2023-01-03 05:22:50.597  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rating/update/{id}],methods=[POST]}" onto public java.lang.String com.nnk.springboot.controllers.RatingController.updateRating(java.lang.Integer,com.nnk.springboot.domain.Rating,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2023-01-03 05:22:50.597  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rating/delete/{id}],methods=[GET]}" onto public java.lang.String com.nnk.springboot.controllers.RatingController.deleteRating(java.lang.Integer,org.springframework.ui.Model)
+2023-01-03 05:22:50.598  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rating/update/{id}],methods=[GET]}" onto public java.lang.String com.nnk.springboot.controllers.RatingController.showUpdateForm(java.lang.Integer,org.springframework.ui.Model)
+2023-01-03 05:22:50.598  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rating/add],methods=[GET]}" onto public java.lang.String com.nnk.springboot.controllers.RatingController.addRatingForm(com.nnk.springboot.domain.Rating)
+2023-01-03 05:22:50.598  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rating/validate],methods=[POST]}" onto public java.lang.String com.nnk.springboot.controllers.RatingController.validate(com.nnk.springboot.domain.Rating,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2023-01-03 05:22:50.599  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ruleName/list]}" onto public java.lang.String com.nnk.springboot.controllers.RuleNameController.home(org.springframework.ui.Model)
+2023-01-03 05:22:50.599  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ruleName/add],methods=[GET]}" onto public java.lang.String com.nnk.springboot.controllers.RuleNameController.addRuleForm(com.nnk.springboot.domain.RuleName)
+2023-01-03 05:22:50.600  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ruleName/update/{id}],methods=[GET]}" onto public java.lang.String com.nnk.springboot.controllers.RuleNameController.showUpdateForm(java.lang.Integer,org.springframework.ui.Model)
+2023-01-03 05:22:50.600  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ruleName/update/{id}],methods=[POST]}" onto public java.lang.String com.nnk.springboot.controllers.RuleNameController.updateRuleName(java.lang.Integer,com.nnk.springboot.domain.RuleName,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2023-01-03 05:22:50.600  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ruleName/delete/{id}],methods=[GET]}" onto public java.lang.String com.nnk.springboot.controllers.RuleNameController.deleteRuleName(java.lang.Integer,org.springframework.ui.Model)
+2023-01-03 05:22:50.600  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ruleName/validate],methods=[POST]}" onto public java.lang.String com.nnk.springboot.controllers.RuleNameController.validate(com.nnk.springboot.domain.RuleName,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2023-01-03 05:22:50.600  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/trade/list]}" onto public java.lang.String com.nnk.springboot.controllers.TradeController.home(org.springframework.ui.Model)
+2023-01-03 05:22:50.600  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/trade/update/{id}],methods=[GET]}" onto public java.lang.String com.nnk.springboot.controllers.TradeController.showUpdateForm(java.lang.Integer,org.springframework.ui.Model)
+2023-01-03 05:22:50.601  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/trade/add],methods=[GET]}" onto public java.lang.String com.nnk.springboot.controllers.TradeController.addUser(com.nnk.springboot.domain.Trade)
+2023-01-03 05:22:50.601  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/trade/update/{id}],methods=[POST]}" onto public java.lang.String com.nnk.springboot.controllers.TradeController.updateTrade(java.lang.Integer,com.nnk.springboot.domain.Trade,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2023-01-03 05:22:50.601  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/trade/delete/{id}],methods=[GET]}" onto public java.lang.String com.nnk.springboot.controllers.TradeController.deleteTrade(java.lang.Integer,org.springframework.ui.Model)
+2023-01-03 05:22:50.601  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/trade/validate],methods=[POST]}" onto public java.lang.String com.nnk.springboot.controllers.TradeController.validate(com.nnk.springboot.domain.Trade,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2023-01-03 05:22:50.602  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/list],methods=[GET]}" onto public java.lang.String com.nnk.springboot.controllers.UserController.home(org.springframework.ui.Model)
+2023-01-03 05:22:50.602  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/update/{id}],methods=[GET]}" onto public java.lang.String com.nnk.springboot.controllers.UserController.showUpdateForm(java.lang.Integer,org.springframework.ui.Model)
+2023-01-03 05:22:50.602  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/add],methods=[GET]}" onto public java.lang.String com.nnk.springboot.controllers.UserController.addUser(com.nnk.springboot.domain.User)
+2023-01-03 05:22:50.602  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/update/{id}],methods=[POST]}" onto public java.lang.String com.nnk.springboot.controllers.UserController.updateUser(java.lang.Integer,com.nnk.springboot.domain.User,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2023-01-03 05:22:50.602  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/delete/{id}],methods=[GET]}" onto public java.lang.String com.nnk.springboot.controllers.UserController.deleteUser(java.lang.Integer,org.springframework.ui.Model)
+2023-01-03 05:22:50.602  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/validate],methods=[POST]}" onto public java.lang.String com.nnk.springboot.controllers.UserController.validate(com.nnk.springboot.domain.User,org.springframework.validation.BindingResult,org.springframework.ui.Model)
+2023-01-03 05:22:50.604  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-01-03 05:22:50.604  INFO 33261 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2023-01-03 05:22:50.616  INFO 33261 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-01-03 05:22:50.616  INFO 33261 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-01-03 05:22:50.757  INFO 33261 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-03 05:22:50.770  INFO 33261 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2023-01-03 05:22:50.772  INFO 33261 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2023-01-03 05:22:50.775  INFO 33261 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2023-01-03 05:22:58.618  INFO 33261 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2023-01-03 05:22:58.618  INFO 33261 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2023-01-03 05:22:58.624  INFO 33261 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 6 ms
+2023-01-03 05:23:01.158 DEBUG 33261 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [uri=/bidList/list]
+2023-01-03 05:23:01.345 DEBUG 33261 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list]
+2023-01-03 05:23:01.358 DEBUG 33261 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [uri=/css/bootstrap.min.css]
+2023-01-03 05:23:01.367 DEBUG 33261 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/css/bootstrap.min.css]
+2023-01-03 05:23:52.196  INFO 33261 --- [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-01-03 05:23:52.196  INFO 33261 --- [RMI TCP Connection(3)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2f125b28: startup date [Tue Jan 03 05:22:48 CET 2023]; root of context hierarchy
+2023-01-03 05:23:52.197  INFO 33261 --- [RMI TCP Connection(3)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2023-01-03 05:23:52.197  INFO 33261 --- [RMI TCP Connection(3)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2023-01-03 05:23:52.198  INFO 33261 --- [RMI TCP Connection(3)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-03 05:23:52.199  INFO 33261 --- [RMI TCP Connection(3)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-03 05:23:52.200  INFO 33261 --- [RMI TCP Connection(3)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-03 05:23:58.304 DEBUG 33448 --- [localhost-startStop-1] o.s.w.f.CommonsRequestLoggingFilter      : Initializing filter 'logFilter'
+2023-01-03 05:23:58.304 DEBUG 33448 --- [localhost-startStop-1] o.s.w.f.CommonsRequestLoggingFilter      : Filter 'logFilter' configured successfully
+2023-01-03 05:24:23.913 DEBUG 33448 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : Before request [uri=/bidList/list]
+2023-01-03 05:24:24.093 DEBUG 33448 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list]
+2023-01-03 05:24:24.104 DEBUG 33448 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : Before request [uri=/css/bootstrap.min.css]
+2023-01-03 05:24:24.113 DEBUG 33448 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/css/bootstrap.min.css]
+2023-01-03 05:24:33.055 DEBUG 33448 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : Before request [uri=/bidList/update/1]
+2023-01-03 05:24:33.079 DEBUG 33448 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/update/1]
+2023-01-03 05:24:33.087 DEBUG 33448 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [uri=/css/bootstrap.min.css]
+2023-01-03 05:24:33.089 DEBUG 33448 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/css/bootstrap.min.css]
+2023-01-03 05:25:46.161 DEBUG 33448 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [uri=/bidList/update/1]
+2023-01-03 05:25:46.196 DEBUG 33448 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/update/1;payload=account=HSBC&type=&bidQuantity=25.0]
+2023-01-03 05:25:46.206 DEBUG 33448 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [uri=/css/bootstrap.min.css]
+2023-01-03 05:25:46.208 DEBUG 33448 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/css/bootstrap.min.css]
+2023-01-03 05:27:42.871 DEBUG 33448 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [uri=/bidList/update/1]
+2023-01-03 05:27:42.896 DEBUG 33448 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/update/1;payload=account=HSBC&type=6%2B56%2B56%2B5&bidQuantity=25.0]
+2023-01-03 05:27:42.899 DEBUG 33448 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : Before request [uri=/bidList/list]
+2023-01-03 05:27:42.905 DEBUG 33448 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list]
+2023-01-03 05:27:42.918 DEBUG 33448 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : Before request [uri=/css/bootstrap.min.css]
+2023-01-03 05:27:42.920 DEBUG 33448 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/css/bootstrap.min.css]
+2023-01-03 05:30:22.471 DEBUG 33730 --- [localhost-startStop-1] o.s.w.f.CommonsRequestLoggingFilter      : Initializing filter 'logFilter'
+2023-01-03 05:30:22.471 DEBUG 33730 --- [localhost-startStop-1] o.s.w.f.CommonsRequestLoggingFilter      : Filter 'logFilter' configured successfully
+2023-01-03 05:30:35.070 DEBUG 33730 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/list]
+2023-01-03 05:30:35.256 DEBUG 33730 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list]
+2023-01-03 05:30:35.271 DEBUG 33730 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/css/bootstrap.min.css]
+2023-01-03 05:30:35.279 DEBUG 33730 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/css/bootstrap.min.css]
+2023-01-03 05:30:54.071 DEBUG 33730 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/add]
+2023-01-03 05:30:54.090 DEBUG 33730 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/add]
+2023-01-03 05:30:54.100 DEBUG 33730 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/css/bootstrap.min.css]
+2023-01-03 05:30:54.102 DEBUG 33730 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/css/bootstrap.min.css]
+2023-01-03 05:30:57.988 DEBUG 33730 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/list]
+2023-01-03 05:30:57.995 DEBUG 33730 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list]
+2023-01-03 05:30:58.005 DEBUG 33730 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/css/bootstrap.min.css]
+2023-01-03 05:30:58.007 DEBUG 33730 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/css/bootstrap.min.css]
+2023-01-03 05:30:59.314 DEBUG 33730 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/update/2]
+2023-01-03 05:30:59.327 DEBUG 33730 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/update/2]
+2023-01-03 05:30:59.339 DEBUG 33730 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/css/bootstrap.min.css]
+2023-01-03 05:30:59.340 DEBUG 33730 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/css/bootstrap.min.css]
+2023-01-03 05:31:05.939 DEBUG 33730 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/update/2]
+2023-01-03 05:31:05.981 DEBUG 33730 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/update/2;payload=account=BNP&type=4664565445&bidQuantity=40.0]
+2023-01-03 05:31:05.983 DEBUG 33730 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/list]
+2023-01-03 05:31:05.989 DEBUG 33730 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list]
+2023-01-03 05:31:06.003 DEBUG 33730 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/css/bootstrap.min.css]
+2023-01-03 05:31:06.005 DEBUG 33730 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/css/bootstrap.min.css]
+2023-01-03 05:32:24.117 DEBUG 33901 --- [localhost-startStop-1] o.s.w.f.CommonsRequestLoggingFilter      : Initializing filter 'logFilter'
+2023-01-03 05:32:24.118 DEBUG 33901 --- [localhost-startStop-1] o.s.w.f.CommonsRequestLoggingFilter      : Filter 'logFilter' configured successfully
+2023-01-03 05:32:42.691 DEBUG 33901 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/list;headers={host=[localhost:8080], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8], accept-language=[en-US,en;q=0.5], accept-encoding=[gzip, deflate, br], referer=[http://localhost:8080/login], connection=[keep-alive], cookie=[JSESSIONID=3E9900C68B497B78D224AE933F999681], upgrade-insecure-requests=[1], sec-fetch-dest=[document], sec-fetch-mode=[navigate], sec-fetch-site=[same-origin], sec-fetch-user=[?1]}]
+2023-01-03 05:32:42.875 DEBUG 33901 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list;headers={host=[localhost:8080], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8], accept-language=[en-US,en;q=0.5], accept-encoding=[gzip, deflate, br], referer=[http://localhost:8080/login], connection=[keep-alive], cookie=[JSESSIONID=3E9900C68B497B78D224AE933F999681], upgrade-insecure-requests=[1], sec-fetch-dest=[document], sec-fetch-mode=[navigate], sec-fetch-site=[same-origin], sec-fetch-user=[?1]}]
+2023-01-03 05:32:42.889 DEBUG 33901 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/css/bootstrap.min.css;headers={host=[localhost:8080], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0], accept=[text/css,*/*;q=0.1], accept-language=[en-US,en;q=0.5], accept-encoding=[gzip, deflate, br], connection=[keep-alive], referer=[http://localhost:8080/bidList/list], cookie=[JSESSIONID=3E9900C68B497B78D224AE933F999681], sec-fetch-dest=[style], sec-fetch-mode=[no-cors], sec-fetch-site=[same-origin]}]
+2023-01-03 05:32:42.896 DEBUG 33901 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/css/bootstrap.min.css;headers={host=[localhost:8080], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0], accept=[text/css,*/*;q=0.1], accept-language=[en-US,en;q=0.5], accept-encoding=[gzip, deflate, br], connection=[keep-alive], referer=[http://localhost:8080/bidList/list], cookie=[JSESSIONID=3E9900C68B497B78D224AE933F999681], sec-fetch-dest=[style], sec-fetch-mode=[no-cors], sec-fetch-site=[same-origin]}]
+2023-01-03 05:32:44.131 DEBUG 33901 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/update/2;headers={host=[localhost:8080], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8], accept-language=[en-US,en;q=0.5], accept-encoding=[gzip, deflate, br], connection=[keep-alive], referer=[http://localhost:8080/bidList/list], cookie=[JSESSIONID=3E9900C68B497B78D224AE933F999681], upgrade-insecure-requests=[1], sec-fetch-dest=[document], sec-fetch-mode=[navigate], sec-fetch-site=[same-origin], sec-fetch-user=[?1]}]
+2023-01-03 05:32:44.151 DEBUG 33901 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/update/2;headers={host=[localhost:8080], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8], accept-language=[en-US,en;q=0.5], accept-encoding=[gzip, deflate, br], connection=[keep-alive], referer=[http://localhost:8080/bidList/list], cookie=[JSESSIONID=3E9900C68B497B78D224AE933F999681], upgrade-insecure-requests=[1], sec-fetch-dest=[document], sec-fetch-mode=[navigate], sec-fetch-site=[same-origin], sec-fetch-user=[?1]}]
+2023-01-03 05:32:44.160 DEBUG 33901 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/css/bootstrap.min.css;headers={host=[localhost:8080], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0], accept=[text/css,*/*;q=0.1], accept-language=[en-US,en;q=0.5], accept-encoding=[gzip, deflate, br], connection=[keep-alive], referer=[http://localhost:8080/bidList/update/2], cookie=[JSESSIONID=3E9900C68B497B78D224AE933F999681], sec-fetch-dest=[style], sec-fetch-mode=[no-cors], sec-fetch-site=[same-origin]}]
+2023-01-03 05:32:44.162 DEBUG 33901 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/css/bootstrap.min.css;headers={host=[localhost:8080], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0], accept=[text/css,*/*;q=0.1], accept-language=[en-US,en;q=0.5], accept-encoding=[gzip, deflate, br], connection=[keep-alive], referer=[http://localhost:8080/bidList/update/2], cookie=[JSESSIONID=3E9900C68B497B78D224AE933F999681], sec-fetch-dest=[style], sec-fetch-mode=[no-cors], sec-fetch-site=[same-origin]}]
+2023-01-03 05:32:51.578 DEBUG 33901 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/update/2;headers={host=[localhost:8080], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8], accept-language=[en-US,en;q=0.5], accept-encoding=[gzip, deflate, br], content-length=[44], origin=[http://localhost:8080], connection=[keep-alive], referer=[http://localhost:8080/bidList/update/2], cookie=[JSESSIONID=3E9900C68B497B78D224AE933F999681], upgrade-insecure-requests=[1], sec-fetch-dest=[document], sec-fetch-mode=[navigate], sec-fetch-site=[same-origin], sec-fetch-user=[?1], Content-Type=[application/x-www-form-urlencoded;charset=UTF-8]}]
+2023-01-03 05:32:51.617 DEBUG 33901 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/update/2;headers={host=[localhost:8080], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8], accept-language=[en-US,en;q=0.5], accept-encoding=[gzip, deflate, br], content-length=[44], origin=[http://localhost:8080], connection=[keep-alive], referer=[http://localhost:8080/bidList/update/2], cookie=[JSESSIONID=3E9900C68B497B78D224AE933F999681], upgrade-insecure-requests=[1], sec-fetch-dest=[document], sec-fetch-mode=[navigate], sec-fetch-site=[same-origin], sec-fetch-user=[?1], Content-Type=[application/x-www-form-urlencoded;charset=UTF-8]};payload=account=BNP&type=3212132121&bidQuantity=40.0]
+2023-01-03 05:32:51.619 DEBUG 33901 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/list;headers={host=[localhost:8080], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8], accept-language=[en-US,en;q=0.5], accept-encoding=[gzip, deflate, br], referer=[http://localhost:8080/bidList/update/2], connection=[keep-alive], cookie=[JSESSIONID=3E9900C68B497B78D224AE933F999681], upgrade-insecure-requests=[1], sec-fetch-dest=[document], sec-fetch-mode=[navigate], sec-fetch-site=[same-origin], sec-fetch-user=[?1]}]
+2023-01-03 05:32:51.625 DEBUG 33901 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list;headers={host=[localhost:8080], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8], accept-language=[en-US,en;q=0.5], accept-encoding=[gzip, deflate, br], referer=[http://localhost:8080/bidList/update/2], connection=[keep-alive], cookie=[JSESSIONID=3E9900C68B497B78D224AE933F999681], upgrade-insecure-requests=[1], sec-fetch-dest=[document], sec-fetch-mode=[navigate], sec-fetch-site=[same-origin], sec-fetch-user=[?1]}]
+2023-01-03 05:32:51.634 DEBUG 33901 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/css/bootstrap.min.css;headers={host=[localhost:8080], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0], accept=[text/css,*/*;q=0.1], accept-language=[en-US,en;q=0.5], accept-encoding=[gzip, deflate, br], connection=[keep-alive], referer=[http://localhost:8080/bidList/list], cookie=[JSESSIONID=3E9900C68B497B78D224AE933F999681], sec-fetch-dest=[style], sec-fetch-mode=[no-cors], sec-fetch-site=[same-origin]}]
+2023-01-03 05:32:51.637 DEBUG 33901 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/css/bootstrap.min.css;headers={host=[localhost:8080], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0], accept=[text/css,*/*;q=0.1], accept-language=[en-US,en;q=0.5], accept-encoding=[gzip, deflate, br], connection=[keep-alive], referer=[http://localhost:8080/bidList/list], cookie=[JSESSIONID=3E9900C68B497B78D224AE933F999681], sec-fetch-dest=[style], sec-fetch-mode=[no-cors], sec-fetch-site=[same-origin]}]
+2023-01-03 05:37:18.055  INFO 34233 --- [restartedMain] com.nnk.springboot.Application           : Starting Application on fixe with PID 34233 (/home/gpi/poseidon/target/classes started by gpi in /home/gpi/poseidon)
+2023-01-03 05:37:18.055 DEBUG 34233 --- [restartedMain] com.nnk.springboot.Application           : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2023-01-03 05:37:18.056  INFO 34233 --- [restartedMain] com.nnk.springboot.Application           : No active profile set, falling back to default profiles: default
+2023-01-03 05:37:18.857 DEBUG 34233 --- [localhost-startStop-1] o.s.w.f.CommonsRequestLoggingFilter      : Initializing filter 'logFilter'
+2023-01-03 05:37:18.858 DEBUG 34233 --- [localhost-startStop-1] o.s.w.f.CommonsRequestLoggingFilter      : Filter 'logFilter' configured successfully
+2023-01-03 05:37:20.200  INFO 34233 --- [restartedMain] com.nnk.springboot.Application           : Started Application in 2.266 seconds (JVM running for 2.472)
+2023-01-03 05:37:38.244  INFO 34329 --- [main] c.n.s.controllers.BidListControllerTest  : Starting BidListControllerTest on fixe with PID 34329 (started by gpi in /home/gpi/poseidon)
+2023-01-03 05:37:38.245 DEBUG 34329 --- [main] c.n.s.controllers.BidListControllerTest  : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2023-01-03 05:37:38.246  INFO 34329 --- [main] c.n.s.controllers.BidListControllerTest  : No active profile set, falling back to default profiles: default
+2023-01-03 05:37:41.020  INFO 34329 --- [main] c.n.s.controllers.BidListControllerTest  : Started BidListControllerTest in 2.897 seconds (JVM running for 3.223)
+2023-01-03 05:37:41.061 DEBUG 34329 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/list]
+2023-01-03 05:37:41.263 DEBUG 34329 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list]
+2023-01-03 05:37:41.271 DEBUG 34329 --- [main] c.n.s.controllers.BidListControllerTest  : http://localhost/
+2023-01-03 05:38:18.997  INFO 34387 --- [main] c.n.s.controllers.BidListControllerTest  : Starting BidListControllerTest on fixe with PID 34387 (started by gpi in /home/gpi/poseidon)
+2023-01-03 05:38:18.998 DEBUG 34387 --- [main] c.n.s.controllers.BidListControllerTest  : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2023-01-03 05:38:18.999  INFO 34387 --- [main] c.n.s.controllers.BidListControllerTest  : No active profile set, falling back to default profiles: default
+2023-01-03 05:38:21.758  INFO 34387 --- [main] c.n.s.controllers.BidListControllerTest  : Started BidListControllerTest in 2.886 seconds (JVM running for 3.213)
+2023-01-03 05:38:21.793 DEBUG 34387 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/list]
+2023-01-03 05:38:22.008 DEBUG 34387 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list]
+2023-01-03 05:38:22.017 DEBUG 34387 --- [main] c.n.s.controllers.BidListControllerTest  : http://localhost/
+2023-01-03 05:49:14.256  INFO 37526 --- [main] c.n.s.controllers.BidListControllerTest  : Starting BidListControllerTest on fixe with PID 37526 (started by gpi in /home/gpi/poseidon)
+2023-01-03 05:49:14.257 DEBUG 37526 --- [main] c.n.s.controllers.BidListControllerTest  : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2023-01-03 05:49:14.259  INFO 37526 --- [main] c.n.s.controllers.BidListControllerTest  : No active profile set, falling back to default profiles: default
+2023-01-03 05:49:17.008  INFO 37526 --- [main] c.n.s.controllers.BidListControllerTest  : Started BidListControllerTest in 2.872 seconds (JVM running for 3.215)
+2023-01-03 05:49:17.040 DEBUG 37526 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/list]
+2023-01-03 05:49:17.256 DEBUG 37526 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list]
+2023-01-03 05:49:17.267 DEBUG 37526 --- [main] c.n.s.controllers.BidListControllerTest  : <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<title>Home</title>
+<link rel="stylesheet" href="../../css/bootstrap.min.css" >
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-6">
+			<a href="/bidList/list">Bid List</a>&nbsp;|&nbsp;
+			<a href="/curvePoint/list">Curve Points</a>&nbsp;|&nbsp;
+			<a href="/rating/list">Ratings</a>&nbsp;|&nbsp;
+			<a href="/trade/list">Trade</a>&nbsp;|&nbsp;
+			<a href="/ruleName/list">Rule</a>
+		</div>
+		<div class="col-6 text-right">
+			Logged in user: <b class="user"> user </b>
+			<form action="/app-logout" method="POST">
+				<input type="submit" value="Logout"/>
+			</form>
+		</div>
+	</div>
+	<div class="row"><h2>Bid List</h2></div>
+	<div class="row">
+		<a href="/bidList/add" class="btn btn-primary btn-sm">Add New</a>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Account</th>
+					<th>Type</th>
+					<th>Bid Quantity</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="width: 10%">1</td>
+					<td>accountTest1</td>
+					<td>typeTest1</td>
+					<td style="width: 25%">10.0</td>
+					<td style="width: 15%" class="text-center">
+						<a href="/bidList/update/1">Edit</a>&nbsp;|&nbsp;
+						<a href="/bidList/delete/1">Delete</a>
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 10%">12</td>
+					<td>accountTest12</td>
+					<td>typeTest12</td>
+					<td style="width: 25%">120.0</td>
+					<td style="width: 15%" class="text-center">
+						<a href="/bidList/update/12">Edit</a>&nbsp;|&nbsp;
+						<a href="/bidList/delete/12">Delete</a>
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 10%">5</td>
+					<td>accountTest5</td>
+					<td>typeTest5</td>
+					<td style="width: 25%">50.0</td>
+					<td style="width: 15%" class="text-center">
+						<a href="/bidList/update/5">Edit</a>&nbsp;|&nbsp;
+						<a href="/bidList/delete/5">Delete</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+</body>
+</html>
+2023-01-03 05:50:53.941  INFO 37729 --- [main] c.n.s.controllers.BidListControllerTest  : Starting BidListControllerTest on fixe with PID 37729 (started by gpi in /home/gpi/poseidon)
+2023-01-03 05:50:53.942 DEBUG 37729 --- [main] c.n.s.controllers.BidListControllerTest  : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2023-01-03 05:50:53.943  INFO 37729 --- [main] c.n.s.controllers.BidListControllerTest  : No active profile set, falling back to default profiles: default
+2023-01-03 05:50:56.755  INFO 37729 --- [main] c.n.s.controllers.BidListControllerTest  : Started BidListControllerTest in 2.983 seconds (JVM running for 3.377)
+2023-01-03 05:50:56.814 DEBUG 37729 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/list]
+2023-01-03 05:50:57.020 DEBUG 37729 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list]
+2023-01-03 05:50:57.027 DEBUG 37729 --- [main] c.n.s.controllers.BidListControllerTest  : <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<title>Home</title>
+<link rel="stylesheet" href="../../css/bootstrap.min.css" >
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-6">
+			<a href="/bidList/list">Bid List</a>&nbsp;|&nbsp;
+			<a href="/curvePoint/list">Curve Points</a>&nbsp;|&nbsp;
+			<a href="/rating/list">Ratings</a>&nbsp;|&nbsp;
+			<a href="/trade/list">Trade</a>&nbsp;|&nbsp;
+			<a href="/ruleName/list">Rule</a>
+		</div>
+		<div class="col-6 text-right">
+			Logged in user: <b class="user"> user </b>
+			<form action="/app-logout" method="POST">
+				<input type="submit" value="Logout"/>
+			</form>
+		</div>
+	</div>
+	<div class="row"><h2>Bid List</h2></div>
+	<div class="row">
+		<a href="/bidList/add" class="btn btn-primary btn-sm">Add New</a>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Account</th>
+					<th>Type</th>
+					<th>Bid Quantity</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="width: 10%">1</td>
+					<td>accountTest1</td>
+					<td>typeTest1</td>
+					<td style="width: 25%">10.0</td>
+					<td style="width: 15%" class="text-center">
+						<a href="/bidList/update/1">Edit</a>&nbsp;|&nbsp;
+						<a href="/bidList/delete/1">Delete</a>
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 10%">12</td>
+					<td>accountTest12</td>
+					<td>typeTest12</td>
+					<td style="width: 25%">120.0</td>
+					<td style="width: 15%" class="text-center">
+						<a href="/bidList/update/12">Edit</a>&nbsp;|&nbsp;
+						<a href="/bidList/delete/12">Delete</a>
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 10%">5</td>
+					<td>accountTest5</td>
+					<td>typeTest5</td>
+					<td style="width: 25%">50.0</td>
+					<td style="width: 15%" class="text-center">
+						<a href="/bidList/update/5">Edit</a>&nbsp;|&nbsp;
+						<a href="/bidList/delete/5">Delete</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+</body>
+</html>
+2023-01-03 05:53:29.862  INFO 37921 --- [main] c.n.s.controllers.BidListControllerTest  : Starting BidListControllerTest on fixe with PID 37921 (started by gpi in /home/gpi/poseidon)
+2023-01-03 05:53:29.862 DEBUG 37921 --- [main] c.n.s.controllers.BidListControllerTest  : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2023-01-03 05:53:29.863  INFO 37921 --- [main] c.n.s.controllers.BidListControllerTest  : No active profile set, falling back to default profiles: default
+2023-01-03 05:53:32.681  INFO 37921 --- [main] c.n.s.controllers.BidListControllerTest  : Started BidListControllerTest in 2.939 seconds (JVM running for 3.299)
+2023-01-03 05:53:32.724 DEBUG 37921 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/list]
+2023-01-03 05:53:32.923 DEBUG 37921 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list]
+2023-01-03 05:53:58.017  INFO 37984 --- [main] c.n.s.controllers.BidListControllerTest  : Starting BidListControllerTest on fixe with PID 37984 (started by gpi in /home/gpi/poseidon)
+2023-01-03 05:53:58.018 DEBUG 37984 --- [main] c.n.s.controllers.BidListControllerTest  : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2023-01-03 05:53:58.019  INFO 37984 --- [main] c.n.s.controllers.BidListControllerTest  : No active profile set, falling back to default profiles: default
+2023-01-03 05:54:00.811  INFO 37984 --- [main] c.n.s.controllers.BidListControllerTest  : Started BidListControllerTest in 2.916 seconds (JVM running for 3.249)
+2023-01-03 05:54:00.853 DEBUG 37984 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/list]
+2023-01-03 05:54:01.071 DEBUG 37984 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list]
+2023-01-03 05:58:05.042  INFO 38138 --- [main] c.n.s.controllers.BidListControllerTest  : Starting BidListControllerTest on fixe with PID 38138 (started by gpi in /home/gpi/poseidon)
+2023-01-03 05:58:05.043 DEBUG 38138 --- [main] c.n.s.controllers.BidListControllerTest  : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2023-01-03 05:58:05.045  INFO 38138 --- [main] c.n.s.controllers.BidListControllerTest  : No active profile set, falling back to default profiles: default
+2023-01-03 05:58:08.686  INFO 38138 --- [main] c.n.s.controllers.BidListControllerTest  : Started BidListControllerTest in 3.862 seconds (JVM running for 4.897)
+2023-01-03 05:58:08.818 DEBUG 38138 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/validate]
+2023-01-03 05:58:08.908 DEBUG 38138 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/validate;payload={"bidListId":null,"account":"accountTest","type":"typeTest","bidQuantity":150.0}]
+2023-01-03 05:58:08.916 DEBUG 38138 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/list]
+2023-01-03 05:58:09.177 DEBUG 38138 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list]
+2023-01-03 05:58:09.188 DEBUG 38138 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/add]
+2023-01-03 05:58:09.203 DEBUG 38138 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/add]
+2023-01-03 05:59:12.780  INFO 38225 --- [main] c.n.s.controllers.BidListControllerTest  : Starting BidListControllerTest on fixe with PID 38225 (started by gpi in /home/gpi/poseidon)
+2023-01-03 05:59:12.781 DEBUG 38225 --- [main] c.n.s.controllers.BidListControllerTest  : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2023-01-03 05:59:12.783  INFO 38225 --- [main] c.n.s.controllers.BidListControllerTest  : No active profile set, falling back to default profiles: default
+2023-01-03 05:59:15.573  INFO 38225 --- [main] c.n.s.controllers.BidListControllerTest  : Started BidListControllerTest in 2.918 seconds (JVM running for 3.249)
+2023-01-03 05:59:15.668 DEBUG 38225 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/validate]
+2023-01-03 05:59:15.734 DEBUG 38225 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/validate;payload={"bidListId":null,"account":"accountTest","type":"typeTest","bidQuantity":150.0}]
+2023-01-03 05:59:15.741 DEBUG 38225 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/list]
+2023-01-03 05:59:15.914 DEBUG 38225 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list]
+2023-01-03 05:59:15.937 DEBUG 38225 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/add]
+2023-01-03 05:59:15.950 DEBUG 38225 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/add]
+2023-01-03 06:00:30.155  INFO 38282 --- [main] c.n.s.controllers.BidListControllerTest  : Starting BidListControllerTest on fixe with PID 38282 (started by gpi in /home/gpi/poseidon)
+2023-01-03 06:00:30.156 DEBUG 38282 --- [main] c.n.s.controllers.BidListControllerTest  : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2023-01-03 06:00:30.157  INFO 38282 --- [main] c.n.s.controllers.BidListControllerTest  : No active profile set, falling back to default profiles: default
+2023-01-03 06:00:33.768  INFO 38282 --- [main] c.n.s.controllers.BidListControllerTest  : Started BidListControllerTest in 3.839 seconds (JVM running for 4.869)
+2023-01-03 06:00:33.928 DEBUG 38282 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/validate]
+2023-01-03 06:00:34.081 DEBUG 38282 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/validate;payload={"bidListId":null,"account":"accountTest","type":"typeTest","bidQuantity":150.0}]
+2023-01-03 06:00:34.094 DEBUG 38282 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/list]
+2023-01-03 06:00:34.405 DEBUG 38282 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list]
+2023-01-03 06:00:34.442 DEBUG 38282 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/add]
+2023-01-03 06:00:34.457 DEBUG 38282 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/add]
+2023-01-03 06:04:11.116  INFO 38520 --- [main] c.n.s.controllers.BidListControllerTest  : Starting BidListControllerTest on fixe with PID 38520 (started by gpi in /home/gpi/poseidon)
+2023-01-03 06:04:11.118 DEBUG 38520 --- [main] c.n.s.controllers.BidListControllerTest  : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2023-01-03 06:04:11.120  INFO 38520 --- [main] c.n.s.controllers.BidListControllerTest  : No active profile set, falling back to default profiles: default
+2023-01-03 06:04:13.391  INFO 38520 --- [main] c.n.s.controllers.BidListControllerTest  : Starting BidListControllerTest on fixe with PID 38520 (started by gpi in /home/gpi/poseidon)
+2023-01-03 06:04:13.391 DEBUG 38520 --- [main] c.n.s.controllers.BidListControllerTest  : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2023-01-03 06:04:13.392  INFO 38520 --- [main] c.n.s.controllers.BidListControllerTest  : No active profile set, falling back to default profiles: default
+2023-01-03 06:04:13.999  INFO 38520 --- [main] c.n.s.controllers.BidListControllerTest  : Starting BidListControllerTest on fixe with PID 38520 (started by gpi in /home/gpi/poseidon)
+2023-01-03 06:04:14.000 DEBUG 38520 --- [main] c.n.s.controllers.BidListControllerTest  : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2023-01-03 06:04:14.000  INFO 38520 --- [main] c.n.s.controllers.BidListControllerTest  : No active profile set, falling back to default profiles: default
+2023-01-03 06:04:14.515  INFO 38520 --- [main] c.n.s.controllers.BidListControllerTest  : Starting BidListControllerTest on fixe with PID 38520 (started by gpi in /home/gpi/poseidon)
+2023-01-03 06:04:14.515 DEBUG 38520 --- [main] c.n.s.controllers.BidListControllerTest  : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2023-01-03 06:04:14.515  INFO 38520 --- [main] c.n.s.controllers.BidListControllerTest  : No active profile set, falling back to default profiles: default
+2023-01-03 06:04:15.038  INFO 38520 --- [main] c.n.s.controllers.BidListControllerTest  : Starting BidListControllerTest on fixe with PID 38520 (started by gpi in /home/gpi/poseidon)
+2023-01-03 06:04:15.038 DEBUG 38520 --- [main] c.n.s.controllers.BidListControllerTest  : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2023-01-03 06:04:15.038  INFO 38520 --- [main] c.n.s.controllers.BidListControllerTest  : No active profile set, falling back to default profiles: default
+2023-01-03 06:05:41.173  INFO 38655 --- [main] c.n.s.controllers.BidListControllerTest  : Starting BidListControllerTest on fixe with PID 38655 (started by gpi in /home/gpi/poseidon)
+2023-01-03 06:05:41.174 DEBUG 38655 --- [main] c.n.s.controllers.BidListControllerTest  : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2023-01-03 06:05:41.176  INFO 38655 --- [main] c.n.s.controllers.BidListControllerTest  : No active profile set, falling back to default profiles: default
+2023-01-03 06:05:44.771  INFO 38655 --- [main] c.n.s.controllers.BidListControllerTest  : Started BidListControllerTest in 3.832 seconds (JVM running for 4.835)
+2023-01-03 06:05:44.884 DEBUG 38655 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/validate]
+2023-01-03 06:05:45.019 DEBUG 38655 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/validate;payload={"bidListId":null,"account":"accountTest","type":"typeTest","bidQuantity":150.0}]
+2023-01-03 06:05:45.029 DEBUG 38655 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/list]
+2023-01-03 06:05:45.320 DEBUG 38655 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list]
+2023-01-03 06:05:45.356 DEBUG 38655 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/add]
+2023-01-03 06:05:45.372 DEBUG 38655 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/add]
+2023-01-03 06:06:39.266  INFO 38724 --- [main] c.n.s.controllers.BidListControllerTest  : Starting BidListControllerTest on fixe with PID 38724 (started by gpi in /home/gpi/poseidon)
+2023-01-03 06:06:39.267 DEBUG 38724 --- [main] c.n.s.controllers.BidListControllerTest  : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2023-01-03 06:06:39.269  INFO 38724 --- [main] c.n.s.controllers.BidListControllerTest  : No active profile set, falling back to default profiles: default
+2023-01-03 06:06:42.796  INFO 38724 --- [main] c.n.s.controllers.BidListControllerTest  : Started BidListControllerTest in 3.76 seconds (JVM running for 4.736)
+2023-01-03 06:06:42.919 DEBUG 38724 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/validate]
+2023-01-03 06:06:43.041 DEBUG 38724 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/validate;payload={"bidListId":null,"account":"accountTest","type":"typeTest","bidQuantity":150.0}]
+2023-01-03 06:06:43.053 DEBUG 38724 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/list]
+2023-01-03 06:06:43.333 DEBUG 38724 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list]
+2023-01-03 06:06:43.373 DEBUG 38724 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/add]
+2023-01-03 06:06:43.397 DEBUG 38724 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/add]
+2023-01-03 06:12:19.466  INFO 38928 --- [main] c.n.s.controllers.BidListControllerTest  : Starting BidListControllerTest on fixe with PID 38928 (started by gpi in /home/gpi/poseidon)
+2023-01-03 06:12:19.467 DEBUG 38928 --- [main] c.n.s.controllers.BidListControllerTest  : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2023-01-03 06:12:19.468  INFO 38928 --- [main] c.n.s.controllers.BidListControllerTest  : No active profile set, falling back to default profiles: default
+2023-01-03 06:12:22.112  INFO 38928 --- [main] c.n.s.controllers.BidListControllerTest  : Started BidListControllerTest in 2.764 seconds (JVM running for 3.097)
+2023-01-03 06:12:22.216 DEBUG 38928 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/validate]
+2023-01-03 06:12:22.289 DEBUG 38928 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/validate;payload={"bidListId":null,"account":"accountTest","type":"typeTest","bidQuantity":150.0}]
+2023-01-03 06:12:22.297 DEBUG 38928 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/list]
+2023-01-03 06:12:22.483 DEBUG 38928 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list]
+2023-01-03 06:12:22.510 DEBUG 38928 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/add]
+2023-01-03 06:12:22.522 DEBUG 38928 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/add]
+2023-01-03 06:12:38.266  INFO 38979 --- [main] c.n.s.controllers.BidListControllerTest  : Starting BidListControllerTest on fixe with PID 38979 (started by gpi in /home/gpi/poseidon)
+2023-01-03 06:12:38.267 DEBUG 38979 --- [main] c.n.s.controllers.BidListControllerTest  : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2023-01-03 06:12:38.269  INFO 38979 --- [main] c.n.s.controllers.BidListControllerTest  : No active profile set, falling back to default profiles: default
+2023-01-03 06:12:41.819  INFO 38979 --- [main] c.n.s.controllers.BidListControllerTest  : Started BidListControllerTest in 3.778 seconds (JVM running for 4.767)
+2023-01-03 06:12:41.922 DEBUG 38979 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/validate]
+2023-01-03 06:12:42.038 DEBUG 38979 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/validate;payload={"bidListId":null,"account":"accountTest","type":"typeTest","bidQuantity":150.0}]
+2023-01-03 06:12:42.048 DEBUG 38979 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/list]
+2023-01-03 06:12:42.329 DEBUG 38979 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list]
+2023-01-03 06:12:42.376 DEBUG 38979 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/add]
+2023-01-03 06:12:42.392 DEBUG 38979 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/add]
+2023-01-03 06:18:43.696  INFO 39229 --- [main] c.n.s.controllers.BidListControllerTest  : Starting BidListControllerTest on fixe with PID 39229 (started by gpi in /home/gpi/poseidon)
+2023-01-03 06:18:43.697 DEBUG 39229 --- [main] c.n.s.controllers.BidListControllerTest  : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2023-01-03 06:18:43.699  INFO 39229 --- [main] c.n.s.controllers.BidListControllerTest  : No active profile set, falling back to default profiles: default
+2023-01-03 06:18:47.357  INFO 39229 --- [main] c.n.s.controllers.BidListControllerTest  : Started BidListControllerTest in 3.882 seconds (JVM running for 4.891)
+2023-01-03 06:18:47.478 DEBUG 39229 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/validate]
+2023-01-03 06:18:47.576 DEBUG 39229 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/validate;payload={"bidListId":null,"account":"accountTest","type":"typeTest","bidQuantity":150.0}]
+2023-01-03 06:18:47.585 DEBUG 39229 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/list]
+2023-01-03 06:18:47.852 DEBUG 39229 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list]
+2023-01-03 06:18:47.898 DEBUG 39229 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/add]
+2023-01-03 06:18:47.913 DEBUG 39229 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/add]
+2023-01-03 06:20:15.846  INFO 39378 --- [main] c.n.s.controllers.BidListControllerTest  : Starting BidListControllerTest on fixe with PID 39378 (started by gpi in /home/gpi/poseidon)
+2023-01-03 06:20:15.847 DEBUG 39378 --- [main] c.n.s.controllers.BidListControllerTest  : Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2023-01-03 06:20:15.848  INFO 39378 --- [main] c.n.s.controllers.BidListControllerTest  : No active profile set, falling back to default profiles: default
+2023-01-03 06:20:18.682  INFO 39378 --- [main] c.n.s.controllers.BidListControllerTest  : Started BidListControllerTest in 2.959 seconds (JVM running for 3.291)
+2023-01-03 06:20:18.760 DEBUG 39378 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/validate]
+2023-01-03 06:20:18.825 DEBUG 39378 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/validate;payload={"bidListId":null,"account":"accountTest","type":"typeTest","bidQuantity":150.0}]
+2023-01-03 06:20:18.835 DEBUG 39378 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/list]
+2023-01-03 06:20:19.042 DEBUG 39378 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/list]
+2023-01-03 06:20:19.067 DEBUG 39378 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : BEFORE REQUEST:uri=/bidList/add]
+2023-01-03 06:20:19.080 DEBUG 39378 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : REQUEST DATA : uri=/bidList/add]
