@@ -11,6 +11,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import com.nnk.springboot.dto.BidListDto;
 import com.nnk.springboot.services.BidListService;
@@ -23,7 +24,6 @@ public class BidListController {
 
 	@GetMapping("/bidList/list")
 	public String home(Model model) {
-		// TODO: call service find all bids to show to the view
 		List<BidListDto> allBidListDto = bidListService.getAll();
 		model.addAttribute("allBidListDto", allBidListDto);
 		return "bidList/list";
@@ -36,7 +36,7 @@ public class BidListController {
 	}
 
 	@PostMapping("/bidList/validate")
-	public String validate(@Valid BidListDto bidListDto, BindingResult result) {
+	public String validate(@RequestBody @Valid BidListDto bidListDto, BindingResult result) {
 		if (result.hasErrors()) {
 			return "bidList/add";
 		} else {

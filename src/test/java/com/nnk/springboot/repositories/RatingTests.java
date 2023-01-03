@@ -1,4 +1,4 @@
-package com.nnk.springboot;
+package com.nnk.springboot.repositories;
 
 import java.util.List;
 import java.util.Optional;
