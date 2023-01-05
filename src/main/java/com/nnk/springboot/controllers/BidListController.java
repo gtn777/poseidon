@@ -11,7 +11,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import com.nnk.springboot.dto.BidListDto;
 import com.nnk.springboot.services.BidListService;
@@ -28,15 +27,16 @@ public class BidListController {
 		model.addAttribute("allBidListDto", allBidListDto);
 		return "bidList/list";
 	}
-	// ---------------------
 
 	@GetMapping("/bidList/add")
-	public String addBidForm(BidListDto bidListDto, Model model) {
+	public String addBidForm(Model model) {
+		BidListDto bidListDto = new BidListDto();
+		model.addAttribute(bidListDto);
 		return "bidList/add";
 	}
 
 	@PostMapping("/bidList/validate")
-	public String validate(@RequestBody @Valid BidListDto bidListDto, BindingResult result) {
+	public String validate(@Valid BidListDto bidListDto, BindingResult result) {
 		if (result.hasErrors()) {
 			return "bidList/add";
 		} else {
@@ -45,10 +45,9 @@ public class BidListController {
 		return "redirect:/bidList/list";
 	}
 
-	// ---------------------
-
 	@GetMapping("/bidList/update/{id}")
-	public String showUpdateForm(@PathVariable("id") Integer id, BidListDto bidListDto,
+	public String showUpdateForm(@PathVariable("id") Integer id,
+			BidListDto bidListDto,
 			Model model) {
 		bidListDto = bidListService.getById(id);
 		model.addAttribute("bidListDto", bidListDto);
@@ -56,7 +55,8 @@ public class BidListController {
 	}
 
 	@PostMapping("/bidList/update/{id}")
-	public Object updateBid(@PathVariable("id") Integer id, @Valid BidListDto bidListDto,
+	public Object updateBid(@PathVariable("id") Integer id,
+			@Valid BidListDto bidListDto,
 			BindingResult result) {
 		bidListDto.setBidListId(id);
 		if (result.hasErrors()) {
@@ -66,8 +66,6 @@ public class BidListController {
 		}
 		return "redirect:/bidList/list";
 	}
-
-	// ---------------------
 
 	@GetMapping("/bidList/delete/{id}")
 	public String deleteBid(@PathVariable("id") Integer id, Model model) {

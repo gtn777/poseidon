@@ -13,6 +13,8 @@ import com.nnk.springboot.domain.BidList;
 import com.nnk.springboot.dto.BidListDto;
 import com.nnk.springboot.repositories.BidListRepository;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Service
 @Transactional
 public class BidListService {
@@ -24,27 +26,28 @@ public class BidListService {
 	private BidListRepository bidListRepository;
 
 	public List<BidListDto> getAll() {
-		List<BidListDto> allBidListDto = bidListRepository.findAll().stream()
-				.map(bid -> this.modelMapper.map(bid, BidListDto.class))
+		List<BidListDto> allBidListDto = bidListRepository.findAll()
+				.stream()
+				.map(bid -> modelMapper.map(bid, BidListDto.class))
 				.collect(Collectors.toList());
 		return allBidListDto;
 	}
 
 	public BidListDto getById(int id) {
-		BidListDto returnValue = this.modelMapper.map(bidListRepository.findById(id).get(),
+		BidListDto returnValue = modelMapper.map(bidListRepository.findById(id).get(),
 				BidListDto.class);
 		return returnValue;
 	}
 
-	public BidListDto updateById(int id, BidListDto dto) {
-		BidList bidListUpdated = this.modelMapper.map(dto, BidList.class);
-		bidListUpdated.setBidListId(id);
-		return this.modelMapper.map(bidListRepository.save(bidListUpdated), BidListDto.class);
+	public BidListDto create(BidListDto dto) {
+		BidList newBidList = bidListRepository.save(modelMapper.map(dto, BidList.class));
+		BidListDto updatedBidListDto = modelMapper.map(newBidList, BidListDto.class);
+		return updatedBidListDto;
 	}
 
-	public BidListDto create(BidListDto dto) {
-		return this.modelMapper.map(
-				bidListRepository.save(this.modelMapper.map(dto, BidList.class)), BidListDto.class);
+	public BidListDto updateById(int id, BidListDto dto) {
+		BidList bidListToUpdate = modelMapper.map(dto, BidList.class);
+		return modelMapper.map(bidListRepository.save(bidListToUpdate), BidListDto.class);
 	}
 
 	public void delete(int id) {
