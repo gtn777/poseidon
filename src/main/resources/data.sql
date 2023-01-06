@@ -5,3 +5,6 @@ insert into Users(fullname, username, password, role) values("Admin", "admin", "
 insert into BidList(account, type, bidQuantity) values("HSBC", "type 1", 25);
 insert into BidList(account, type, bidQuantity) values("BNP", "Offshore", 40);
 insert into BidList(account, type, bidQuantity) values("HSBC", "type 7", 12);
+insert into CurvePoint(CurveId, term, value) values(12, 14, 10);
+insert into CurvePoint(CurveId, term, value) values(22, 24, 20);
+insert into CurvePoint(CurveId, term, value) values(32, 34, 30);

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.nnk.springboot.dto.BidListDto;
 import com.nnk.springboot.services.BidListService;
 
+
 @Controller
 public class BidListController {
 
@@ -22,21 +23,21 @@ public class BidListController {
 	private BidListService bidListService;
 
 	@GetMapping("/bidList/list")
-	public String home(Model model) {
+	public String getList(Model model) {
 		List<BidListDto> allBidListDto = bidListService.getAll();
 		model.addAttribute("allBidListDto", allBidListDto);
 		return "bidList/list";
 	}
 
 	@GetMapping("/bidList/add")
-	public String addBidForm(Model model) {
+	public String getAdd(Model model) {
 		BidListDto bidListDto = new BidListDto();
 		model.addAttribute(bidListDto);
 		return "bidList/add";
 	}
 
 	@PostMapping("/bidList/validate")
-	public String validate(@Valid BidListDto bidListDto, BindingResult result) {
+	public String postValidate(@Valid BidListDto bidListDto, BindingResult result) {
 		if (result.hasErrors()) {
 			return "bidList/add";
 		} else {
@@ -46,7 +47,7 @@ public class BidListController {
 	}
 
 	@GetMapping("/bidList/update/{id}")
-	public String showUpdateForm(@PathVariable("id") Integer id,
+	public String getUpdate(@PathVariable("id") Integer id,
 			BidListDto bidListDto,
 			Model model) {
 		bidListDto = bidListService.getById(id);
@@ -55,7 +56,7 @@ public class BidListController {
 	}
 
 	@PostMapping("/bidList/update/{id}")
-	public Object updateBid(@PathVariable("id") Integer id,
+	public Object postUpdate(@PathVariable("id") Integer id,
 			@Valid BidListDto bidListDto,
 			BindingResult result) {
 		bidListDto.setBidListId(id);
@@ -68,8 +69,9 @@ public class BidListController {
 	}
 
 	@GetMapping("/bidList/delete/{id}")
-	public String deleteBid(@PathVariable("id") Integer id, Model model) {
+	public String getDelete(@PathVariable("id") Integer id, Model model) {
 		bidListService.delete(id);
 		return "redirect:/bidList/list";
 	}
+
 }
