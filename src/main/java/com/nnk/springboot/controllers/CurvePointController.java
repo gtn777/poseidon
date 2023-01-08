@@ -23,7 +23,7 @@ public class CurvePointController {
 	@GetMapping("/curvePoint/list")
 	public String getList(Model model) {
 		List<CurvePointDto> allCurvePointDto = service.getAll();
-		model.addAttribute("allCurvePointDto", allCurvePointDto);
+		model.addAttribute("dto", allCurvePointDto);
 		return "curvePoint/list";
 	}
 
