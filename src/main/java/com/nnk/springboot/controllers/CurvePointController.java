@@ -22,8 +22,8 @@ public class CurvePointController {
 
 	@GetMapping("/curvePoint/list")
 	public String getList(Model model) {
-		List<CurvePointDto> allCurvePointDto = service.getAll();
-		model.addAttribute("dto", allCurvePointDto);
+		List<CurvePointDto> dto = service.getAll();
+		model.addAttribute("dto", dto);
 		return "curvePoint/list";
 	}
 
