@@ -29,7 +29,7 @@ public class BidListDto {
 	private Integer bidListId;
 
 	@NotBlank(message = "Account is mandatory.")
-	@Size(min = 1, max = 20, message = "Type must be between 1 and 20 characters.")
+	@Size(min = 1, max = 20, message = "Account must be between 1 and 20 characters.")
 	private String account;
 
 	@NotBlank(message = "Type is mandatory.")
