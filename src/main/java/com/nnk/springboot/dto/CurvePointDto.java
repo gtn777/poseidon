@@ -38,6 +38,10 @@ public class CurvePointDto {
 	@Positive(message = "Value must be positive.")
 	private Double value;
 
+	public Integer getId() {
+		return id;
+	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
@@ -66,10 +70,4 @@ public class CurvePointDto {
 		this.value = value;
 	}
 
-	public Integer getId() {
-		return id;
-	}
-	
-	
-	
 }

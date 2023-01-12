@@ -10,35 +10,10 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Rating")
 public class Rating {
-	
+
 	public Rating() {
 		super();
 	}
-
-	public Rating(String moodysRating, String sandPRating, String fitchRating, Integer orderNumber) {
-		super();
-		this.moodysRating = moodysRating;
-		this.sandPRating = sandPRating;
-		this.fitchRating = fitchRating;
-		this.orderNumber = orderNumber;
-	}
-
-	@Id
-	@Column(name = "Id")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-
-	@Column
-	private String moodysRating;
-
-	@Column
-	private String sandPRating;
-
-	@Column
-	private String fitchRating;
-
-	@Column
-	private Integer orderNumber;
 
 	public Integer getId() {
 		return id;
@@ -79,5 +54,30 @@ public class Rating {
 	public void setOrderNumber(Integer orderNumber) {
 		this.orderNumber = orderNumber;
 	}
+
+	public Rating(String moodysRating, String sandPRating, String fitchRating, Integer orderNumber) {
+		super();
+		this.moodysRating = moodysRating;
+		this.sandPRating = sandPRating;
+		this.fitchRating = fitchRating;
+		this.orderNumber = orderNumber;
+	}
+
+	@Id
+	@Column(name = "Id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+
+	@Column
+	private String moodysRating;
+
+	@Column
+	private String sandPRating;
+
+	@Column
+	private String fitchRating;
+
+	@Column
+	private Integer orderNumber;
 
 }

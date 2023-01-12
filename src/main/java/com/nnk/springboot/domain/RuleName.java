@@ -7,17 +7,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 @Entity
-@Table(name= "RuleName")
+@Table(name = "RuleName")
 public class RuleName {
-	
+
 	public RuleName() {
 		super();
 	}
-	
-	public RuleName(String name, String description, String json, String template, String sqlStr, String sqlPart) {
-		super();
+
+	public RuleName(String name, String description, String json, String template, String sqlStr,
+			String sqlPart) {
 		this.name = name;
 		this.description = description;
 		this.json = json;

@@ -7,7 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 @Entity
 @Table(name = "Users")
 public class User {
@@ -16,14 +15,6 @@ public class User {
 	@Column(name = "Id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-
-	private String username;
-
-	private String password;
-
-	private String fullname;
-
-	private String role;
 
 	public int getId() {
 		return id;
@@ -64,4 +55,13 @@ public class User {
 	public void setRole(String role) {
 		this.role = role;
 	}
+
+	private String username;
+
+	private String password;
+
+	private String fullname;
+
+	private String role;
+
 }
