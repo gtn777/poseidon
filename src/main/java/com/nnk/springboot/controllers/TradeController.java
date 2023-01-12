@@ -1,53 +1,73 @@
 package com.nnk.springboot.controllers;
 
-import com.nnk.springboot.domain.Trade;
+import java.util.List;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.validation.Valid;
+import com.nnk.springboot.dto.TradeDto;
+import com.nnk.springboot.services.TradeService;
 
 @Controller
 public class TradeController {
-	// TODO: Inject Trade service
 
-	@RequestMapping("/trade/list")
-	public String home(Model model) {
-		// TODO: find all Trade, add to model
+	@Autowired
+	private TradeService service;
+
+	@GetMapping("/trade/list")
+	public String getList(Model model) {
+		List<TradeDto> allTradeDto = service.getAll();
+		model.addAttribute("allTradeDto", allTradeDto);
 		return "trade/list";
 	}
 
 	@GetMapping("/trade/add")
-	public String addUser(Trade bid) {
+	public String getAdd(Model model) {
+		TradeDto tradeDto = new TradeDto();
+		model.addAttribute("tradeDto", tradeDto);
 		return "trade/add";
 	}
 
 	@PostMapping("/trade/validate")
-	public String validate(@Valid Trade trade, BindingResult result, Model model) {
-		// TODO: check data valid and save to db, after saving return Trade list
-		return "trade/add";
+	public String postValidate(@Valid TradeDto tradeDto, BindingResult result) {
+		if (result.hasErrors()) {
+			return "trade/add";
+		} else {
+			service.create(tradeDto);
+		}
+		return "redirect:/trade/list";
 	}
 
 	@GetMapping("/trade/update/{id}")
-	public String showUpdateForm(@PathVariable("id") Integer id, Model model) {
-		// TODO: get Trade by Id and to model then show to the form
+	public String getUpdate(@PathVariable("id") Integer id, Model model) {
+		TradeDto tradeDto = service.getById(id);
+		model.addAttribute("tradeDto", tradeDto);
 		return "trade/update";
 	}
 
 	@PostMapping("/trade/update/{id}")
-	public String updateTrade(@PathVariable("id") Integer id, @Valid Trade trade, BindingResult result, Model model) {
-		// TODO: check required fields, if valid call service to update Trade and return
-		// Trade list
+	public Object postUpdate(@PathVariable("id") Integer id,
+			@Valid TradeDto tradeDto,
+			BindingResult result) {
+		tradeDto.setId(id);
+		if (result.hasErrors()) {
+			return "trade/update";
+		} else {
+			service.updateById(id, tradeDto);
+		}
 		return "redirect:/trade/list";
 	}
 
 	@GetMapping("/trade/delete/{id}")
-	public String deleteTrade(@PathVariable("id") Integer id, Model model) {
-		// TODO: Find Trade by Id and delete the Trade, return to Trade list
+	public String getDelete(@PathVariable("id") Integer id, Model model) {
+		service.delete(id);
 		return "redirect:/trade/list";
 	}
 }

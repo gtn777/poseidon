@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.nnk.springboot.dto.BidListDto;
 import com.nnk.springboot.services.BidListService;
 
-
 @Controller
 public class BidListController {
 

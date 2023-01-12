@@ -3,6 +3,11 @@ package com.nnk.springboot.dto;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 public class CurvePointDto {
 
 	public CurvePointDto() {
@@ -38,38 +43,4 @@ public class CurvePointDto {
 	@Positive(message = "Value must be positive.")
 	private Double value;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public Integer getCurveId() {
-		return curveId;
-	}
-
-	public void setCurveId(Integer curveId) {
-		this.curveId = curveId;
-	}
-
-	public Double getTerm() {
-		return term;
-	}
-
-	public void setTerm(Double term) {
-		this.term = term;
-	}
-
-	public Double getValue() {
-		return value;
-	}
-
-	public void setValue(Double value) {
-		this.value = value;
-	}
-
-	public Integer getId() {
-		return id;
-	}
-	
-	
-	
 }

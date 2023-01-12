@@ -7,10 +7,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Entity
+@Setter
+@Getter
 @Table(name = "Rating")
 public class Rating {
-	
+
 	public Rating() {
 		super();
 	}
@@ -39,45 +44,5 @@ public class Rating {
 
 	@Column
 	private Integer orderNumber;
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getMoodysRating() {
-		return moodysRating;
-	}
-
-	public void setMoodysRating(String moodysRating) {
-		this.moodysRating = moodysRating;
-	}
-
-	public String getSandPRating() {
-		return sandPRating;
-	}
-
-	public void setSandPRating(String sandPRating) {
-		this.sandPRating = sandPRating;
-	}
-
-	public String getFitchRating() {
-		return fitchRating;
-	}
-
-	public void setFitchRating(String fitchRating) {
-		this.fitchRating = fitchRating;
-	}
-
-	public Integer getOrderNumber() {
-		return orderNumber;
-	}
-
-	public void setOrderNumber(Integer orderNumber) {
-		this.orderNumber = orderNumber;
-	}
 
 }
