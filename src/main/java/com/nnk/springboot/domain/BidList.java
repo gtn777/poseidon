@@ -9,12 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Getter;
-import lombok.Setter;
-
 @Entity
-@Setter
-@Getter
 @Table(name = "BidList")
 public class BidList {
 
@@ -26,6 +21,38 @@ public class BidList {
 		super();
 		this.account = account;
 		this.type = type;
+		this.bidQuantity = bidQuantity;
+	}
+
+	public Integer getBidListId() {
+		return bidListId;
+	}
+
+	public void setBidListId(Integer bidListId) {
+		this.bidListId = bidListId;
+	}
+
+	public String getAccount() {
+		return account;
+	}
+
+	public void setAccount(String account) {
+		this.account = account;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public Double getBidQuantity() {
+		return bidQuantity;
+	}
+
+	public void setBidQuantity(Double bidQuantity) {
 		this.bidQuantity = bidQuantity;
 	}
 
