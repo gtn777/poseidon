@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,103 +32,118 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithAnonymousUser;
 import org.springframework.security.test.context.support.WithMockUser;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
-import com.nnk.springboot.dto.BidListDto;
-import com.nnk.springboot.services.BidListService;
+import com.nnk.springboot.dto.RuleNameDto;
+import com.nnk.springboot.services.RuleNameService;
 import com.nnk.springboot.utilities.ObjectToMultivalueMap;
 
+import lombok.extern.slf4j.Slf4j;
+
 @WithMockUser
-@RunWith(SpringRunner.class)
-@WebMvcTest(controllers = BidListController.class)
+@RunWith(SpringJUnit4ClassRunner.class)
+@WebMvcTest(controllers = RuleNameController.class)
 @AutoConfigureMockMvc(secure = true)
-public class BidListControllerTest {
+public class RuleNameControllerTest {
 
 	@Autowired
 	private MockMvc mvc;
 
 	@MockBean
-	private BidListService bidListService;
+	private RuleNameService service;
+
+	private List<RuleNameDto> dtoList;
+
+	private RuleNameDto dto;
+
+	private Integer idInteger;
+
+	@Before
+	public void beforeEachInit() {
+		dtoList = new ArrayList<>();
+		dto = new RuleNameDto();
+		dto.setDescription("test descritpion");
+		dto.setName("test name");
+		dto.setJson("test json");
+		dto.setSqlPart("test sql part");
+		dto.setTemplate("test template");
+		dto.setSqlStr("test sql string");
+		idInteger = 10;
+	}
 
 	@After
 	public void afterEachVerif() {
-		verifyNoMoreInteractions(bidListService);
+		verifyNoMoreInteractions(service);
+		
 	}
 
 	@Test
-	public void get_bidListList_successfully_200AndViewOk() throws Exception {
-		List<BidListDto> dto = new ArrayList<>();
-		dto.add(new BidListDto(1, "accountTest1", "home", (double) 10));
-		when(bidListService.getAll()).thenReturn(dto);
-		MvcResult result = mvc.perform(get("/bidList/list"))
+	public void get_ruleNameList_successfully_200AndViewOk() throws Exception {
+		dto.setId(idInteger);
+		dtoList.add(dto);
+		when(service.getAll()).thenReturn(dtoList);
+		MvcResult result = mvc.perform(get("/ruleName/list"))
 				.andExpect(status().isOk())
-				.andExpect(view().name("bidList/list"))
+				.andExpect(view().name("ruleName/list"))
 				.andReturn();
-		verify(bidListService, times(1)).getAll();
-		assertTrue(result.getResponse().getContentAsString().contains("accountTest1"));
+		verify(service, times(1)).getAll();
+		assertTrue(result.getResponse().getContentAsString().contains("test"));
 	}
 
 	@Test
 	public void get_addBidForm_successfully_200AndViewOk() throws Exception {
-		mvc.perform(get("/bidList/add"))
+		mvc.perform(get("/ruleName/add"))
 				.andExpect(status().isOk())
-				.andExpect(view().name("bidList/add"))
-				.andExpect(model().attributeExists("bidListDto"));
+				.andExpect(view().name("ruleName/add"))
+				.andExpect(model().attributeExists("ruleNameDto"));
 	}
 
 	@Test
 	public void post_validate_successfully_dataValidatedAnd302() throws Exception {
-		BidListDto dto = new BidListDto("accountTest", "validate", 15.0);
-		mvc.perform(post("/bidList/validate").with(csrf())
+		mvc.perform(post("/ruleName/validate").with(csrf())
 				.contentType(MediaType.APPLICATION_JSON)
 				.params(ObjectToMultivalueMap.convert(dto)))
 				.andExpect(model().hasNoErrors())
 				.andExpect(status().is3xxRedirection())
-				.andExpect(redirectedUrl("/bidList/list"))
+				.andExpect(redirectedUrl("/ruleName/list"))
 				.andDo(print());
-		verify(bidListService, times(1)).create(any(BidListDto.class));
+		verify(service, times(1)).create(any(RuleNameDto.class));
 	}
 
 	@Test
-	public void get_bidListUpdate_succesfully_200AndViewOk() throws Exception {
-		int id = 10;
-		BidListDto dto = new BidListDto("accountTest", "update", 15.0);
-		when(bidListService.getById(id)).thenReturn(dto);
-		mvc.perform(get("/bidList/update/{id}", id).with(csrf())
+	public void get_ruleNameUpdate_succesfully_200AndViewOk() throws Exception {
+		when(service.getById(idInteger)).thenReturn(dto);
+		mvc.perform(get("/ruleName/update/{id}", idInteger).with(csrf())
 				.contentType(MediaType.APPLICATION_JSON)
 				.characterEncoding("utf-8")
 				.params(ObjectToMultivalueMap.convert(dto)))
 				.andExpect(status().isOk())
-				.andExpect(view().name("bidList/update"))
-				.andExpect(model().attributeExists("bidListDto"))
-				.andExpect(content().string(containsString("accountTest")));
-		verify(bidListService, times(1)).getById(id);
+				.andExpect(view().name("ruleName/update"))
+				.andExpect(model().attributeExists("ruleNameDto"))
+				.andExpect(content().string(containsString("test")));
+		verify(service, times(1)).getById(idInteger);
 	}
 
 	@Test
-	public void post_bidListUpdate_successfully_dataValidAnd302() throws Exception {
-		int id = 10;
-		BidListDto dto = new BidListDto("accountTest", "update", 15.0);
-		mvc.perform(post("/bidList/update/{id}", id).with(csrf())
+	public void post_ruleNameUpdate_successfully_dataValidAnd302() throws Exception {
+		mvc.perform(post("/ruleName/update/{id}", idInteger).with(csrf())
 				.contentType(MediaType.APPLICATION_JSON)
 				.characterEncoding("utf-8")
 				.params(ObjectToMultivalueMap.convert(dto)))
 				.andExpect(model().hasNoErrors())
 				.andExpect(status().is3xxRedirection())
-				.andExpect(redirectedUrl("/bidList/list"));
-		verify(bidListService, times(1)).updateById(anyInt(), any(BidListDto.class));
+				.andExpect(redirectedUrl("/ruleName/list"));
+		verify(service, times(1)).updateById(anyInt(), any(RuleNameDto.class));
 	}
 
 	@Test
-	public void get_bidListDelete_successfully_dataValidAnd302() throws Exception {
-		int id = 10;
-
-		mvc.perform(get("/bidList/delete/{id}", id).with(csrf()))
+	public void get_ruleNameDelete_successfully_dataValidAnd302() throws Exception {
+		mvc.perform(get("/ruleName/delete/{id}", idInteger).with(csrf()))
 				.andExpect(status().is3xxRedirection())
-				.andExpect(redirectedUrl("/bidList/list"));
-		verify(bidListService, times(1)).delete(id);
+				.andExpect(redirectedUrl("/ruleName/list"));
+		verify(service, times(1)).delete(idInteger);
 	}
 
 	// -------------------------------------------------------------------------------------
@@ -136,25 +152,33 @@ public class BidListControllerTest {
 	// ----- fields annotation. (@Min, @NotBlank, @NotNull ...)
 
 	@Test
-	public void postValidate_invalidDto_modelHasError() throws Exception {
-		BidListDto dto = new BidListDto(" ", "validateTest", 15.0);
-		mvc.perform(post("/bidList/validate").with(csrf())
+	public void post_ruleNameValidate_invalidDto_modelHasError() throws Exception {
+		dto.setDescription(" ");
+		dto.setTemplate(null);
+		dto.setSqlStr("");
+		mvc.perform(post("/ruleName/validate").with(csrf())
 				.contentType(MediaType.APPLICATION_JSON)
 				.params(ObjectToMultivalueMap.convert(dto)))
 				.andExpect(model().hasErrors())
-				.andExpect(view().name("bidList/add"));
+				.andExpect(model().attributeHasFieldErrors("ruleNameDto",
+						"description",
+						"template",
+						"sqlStr"))
+				.andExpect(view().name("ruleName/add"));
 	}
 
 	@Test
-	public void post_bidListUpdate_invalidDto_modelHasError() throws Exception {
-		int id = 10;
-		BidListDto dto = new BidListDto(" ", "updateTest", 15.0);
-		mvc.perform(post("/bidList/update/{id}", id).with(csrf())
+	public void post_ruleNameUpdate_invalidDto_modelHasError() throws Exception {
+		dto.setJson(" ");
+		dto.setName(null);
+		dto.setSqlPart("");
+		mvc.perform(post("/ruleName/update/{id}", idInteger).with(csrf())
 				.contentType(MediaType.APPLICATION_JSON)
 				.params(ObjectToMultivalueMap.convert(dto)))
 				.andExpect(model().hasErrors())
-				.andExpect(model().attributeHasFieldErrors("bidListDto", "account"))
-				.andExpect(view().name("bidList/update"));
+				.andExpect(
+						model().attributeHasFieldErrors("ruleNameDto", "name", "json", "sqlPart"))
+				.andExpect(view().name("ruleName/update"));
 	}
 	// --------------------------------------------------------------------------------
 	// ----- Evaluate security filter,
@@ -163,37 +187,37 @@ public class BidListControllerTest {
 	@Test
 	@WithAnonymousUser
 	public void getHome_anonymousUser_401() throws Exception {
-		mvc.perform(get("/bidList/list")).andExpect(status().isUnauthorized());
+		mvc.perform(get("/ruleName/list")).andExpect(status().isUnauthorized());
 	}
 
 	@Test
 	@WithAnonymousUser
 	public void get_addBidForm_anonymousUser_401() throws Exception {
-		mvc.perform(get("/bidList/add")).andExpect(status().isUnauthorized());
+		mvc.perform(get("/ruleName/add")).andExpect(status().isUnauthorized());
 	}
 
 	@Test
 	@WithAnonymousUser
 	public void post_validate_anonymousUser_401() throws Exception {
-		mvc.perform(post("/bidList/validate").with(csrf())).andExpect(status().isUnauthorized());
+		mvc.perform(post("/ruleName/validate").with(csrf())).andExpect(status().isUnauthorized());
 	}
 
 	@Test
 	@WithAnonymousUser
-	public void get_bidListUpdate_anonymousUser_401() throws Exception {
-		mvc.perform(get("/bidList/update")).andExpect(status().isUnauthorized());
+	public void get_ruleNameUpdate_anonymousUser_401() throws Exception {
+		mvc.perform(get("/ruleName/update")).andExpect(status().isUnauthorized());
 	}
 
 	@Test
 	@WithAnonymousUser
-	public void post_bidListUpdate_anonymousUser_then401() throws Exception {
-		mvc.perform(post("/bidList/update").with(csrf())).andExpect(status().isUnauthorized());
+	public void post_ruleNameUpdate_anonymousUser_then401() throws Exception {
+		mvc.perform(post("/ruleName/update").with(csrf())).andExpect(status().isUnauthorized());
 	}
 
 	@Test
 	@WithAnonymousUser
-	public void get_bidListdelete_anonymousUser_then401() throws Exception {
-		mvc.perform(post("/bidList/delete").with(csrf())).andExpect(status().isUnauthorized());
+	public void get_ruleNamedelete_anonymousUser_then401() throws Exception {
+		mvc.perform(post("/ruleName/delete").with(csrf())).andExpect(status().isUnauthorized());
 	}
 
 }

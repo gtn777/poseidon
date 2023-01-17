@@ -9,6 +9,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 @Entity
 @Table(name = "Trade")
 public class Trade {
@@ -17,44 +22,11 @@ public class Trade {
 		super();
 	}
 
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getAccount() {
-		return account;
-	}
-
-	public void setAccount(String account) {
-		this.account = account;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public Double getBuyQuantity() {
-		return buyQuantity;
-	}
-
-	public void setBuyQuantity(Double buyQuantity) {
-		this.buyQuantity = buyQuantity;
-	}
-
 	public Trade(String account, String type) {
 		super();
 		this.account = account;
 		this.type = type;
 	}
-
 
 	@Id
 	@Column(name = "TradeId")
