@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.nnk.springboot.dto.RatingDto;
 import com.nnk.springboot.services.RatingService;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Controller
 public class RatingController {
 	@Autowired
@@ -24,6 +27,7 @@ public class RatingController {
 	public String getList(Model model) {
 		List<RatingDto> allRatingDto = service.getAll();
 		model.addAttribute("allRatingDto", allRatingDto);
+		log.debug("GET /rating/list");
 		return "rating/list";
 	}
 
@@ -31,15 +35,18 @@ public class RatingController {
 	public String getAdd(Model model) {
 		RatingDto ratingDto = new RatingDto();
 		model.addAttribute(ratingDto);
+		log.debug("GET /rating/add");
 		return "rating/add";
 	}
 
 	@PostMapping("/rating/validate")
 	public String postValidate(@Valid RatingDto ratingDto, BindingResult result) {
 		if (result.hasErrors()) {
+			log.error("POST /rating/validate FIELDS ERROR");
 			return "rating/add";
 		} else {
 			service.create(ratingDto);
+			log.debug("POST /rating/validate ratingDto:" + ratingDto.toString());
 		}
 		return "redirect:/rating/list";
 	}
@@ -57,9 +64,12 @@ public class RatingController {
 			BindingResult result) {
 		ratingDto.setId(id);
 		if (result.hasErrors()) {
+			log.error("POST /rating/update FIELDS ERROR");
 			return "rating/update";
 		} else {
 			service.updateById(id, ratingDto);
+			log.debug(
+					"POST /rating/update/" + id + " ratingDto:" + ratingDto.toString());
 		}
 		return "redirect:/rating/list";
 	}
@@ -67,6 +77,7 @@ public class RatingController {
 	@GetMapping("/rating/delete/{id}")
 	public String getDelete(@PathVariable("id") Integer id, Model model) {
 		service.delete(id);
+		log.debug("GET /rating/delete/" + id);
 		return "redirect:/rating/list";
 	}
 }

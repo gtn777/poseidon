@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.nnk.springboot.dto.BidListDto;
 import com.nnk.springboot.services.BidListService;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Controller
 public class BidListController {
 
@@ -25,6 +28,7 @@ public class BidListController {
 	public String getList(Model model) {
 		List<BidListDto> allBidListDto = bidListService.getAll();
 		model.addAttribute("allBidListDto", allBidListDto);
+		log.debug("GET /bidList/list ");
 		return "bidList/list";
 	}
 
@@ -32,14 +36,17 @@ public class BidListController {
 	public String getAdd(Model model) {
 		BidListDto bidListDto = new BidListDto();
 		model.addAttribute(bidListDto);
+		log.debug("GET /bidList/add ");
 		return "bidList/add";
 	}
 
 	@PostMapping("/bidList/validate")
 	public String postValidate(@Valid BidListDto bidListDto, BindingResult result) {
 		if (result.hasErrors()) {
+			log.error("POST /bidList/add FIELDS ERROR ");
 			return "bidList/add";
 		} else {
+			log.debug("POST /bidList/add bidListDto:" + bidListDto.toString());
 			bidListService.create(bidListDto);
 		}
 		return "redirect:/bidList/list";
@@ -51,6 +58,7 @@ public class BidListController {
 			Model model) {
 		bidListDto = bidListService.getById(id);
 		model.addAttribute("bidListDto", bidListDto);
+		log.debug("GET /bidList/update/" + id);
 		return "bidList/update";
 	}
 
@@ -60,9 +68,11 @@ public class BidListController {
 			BindingResult result) {
 		bidListDto.setBidListId(id);
 		if (result.hasErrors()) {
+			log.error("POST /bidList/update/" + id + " FIELDS ERROR ");
 			return "bidList/update";
 		} else {
 			bidListService.updateById(id, bidListDto);
+			log.debug("POST /bidList/update/" + id + " bidListDto:" + bidListDto.toString());
 		}
 		return "redirect:/bidList/list";
 	}
@@ -70,6 +80,7 @@ public class BidListController {
 	@GetMapping("/bidList/delete/{id}")
 	public String getDelete(@PathVariable("id") Integer id, Model model) {
 		bidListService.delete(id);
+		log.debug("GET /bidList/delete/" + id);
 		return "redirect:/bidList/list";
 	}
 

@@ -13,9 +13,6 @@ import com.nnk.springboot.domain.BidList;
 import com.nnk.springboot.dto.BidListDto;
 import com.nnk.springboot.repositories.BidListRepository;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 @Service
 @Transactional
 public class BidListService {
@@ -31,7 +28,6 @@ public class BidListService {
 				.stream()
 				.map(bid -> modelMapper.map(bid, BidListDto.class))
 				.collect(Collectors.toList());
-		log.debug(allBidListDto.get(0).getAccount());
 		return allBidListDto;
 	}
 

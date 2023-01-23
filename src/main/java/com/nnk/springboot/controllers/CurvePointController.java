@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.nnk.springboot.dto.CurvePointDto;
 import com.nnk.springboot.services.CurvePointService;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Controller
 public class CurvePointController {
 	@Autowired
@@ -24,6 +27,7 @@ public class CurvePointController {
 	public String getList(Model model) {
 		List<CurvePointDto> dto = service.getAll();
 		model.addAttribute("dto", dto);
+		log.debug("GET /curvePoint/list");
 		return "curvePoint/list";
 	}
 
@@ -31,15 +35,18 @@ public class CurvePointController {
 	public String getAdd(Model model) {
 		CurvePointDto curvePointDto = new CurvePointDto();
 		model.addAttribute(curvePointDto);
+		log.debug("GET /curvePoint/add");
 		return "curvePoint/add";
 	}
 
 	@PostMapping("/curvePoint/validate")
 	public String postValidate(@Valid CurvePointDto curvePointDto, BindingResult result) {
 		if (result.hasErrors()) {
+			log.error("POST /curvePoint/validate FIELDS ERROR");
 			return "curvePoint/add";
 		} else {
 			service.create(curvePointDto);
+			log.debug("POST /curvePoint/validate curvePointDto:" + curvePointDto.toString());
 		}
 		return "redirect:/curvePoint/list";
 	}
@@ -50,6 +57,7 @@ public class CurvePointController {
 			Model model) {
 		curvePointDto = service.getById(id);
 		model.addAttribute("curvePointDto", curvePointDto);
+		log.debug("GET /curvePoint/update/" + id);
 		return "curvePoint/update";
 	}
 
@@ -59,9 +67,12 @@ public class CurvePointController {
 			BindingResult result) {
 		curvePointDto.setId(id);
 		if (result.hasErrors()) {
+			log.error("POST /curvePoint/update FIELDS ERROR");
 			return "curvePoint/update";
 		} else {
 			service.updateById(id, curvePointDto);
+			log.debug(
+					"POST /curvePoint/update/" + id + " curvePointDto:" + curvePointDto.toString());
 		}
 		return "redirect:/curvePoint/list";
 	}
@@ -69,6 +80,7 @@ public class CurvePointController {
 	@GetMapping("/curvePoint/delete/{id}")
 	public String getDelete(@PathVariable("id") Integer id, Model model) {
 		service.delete(id);
+		log.debug("GET /curvePoint/delete/" + id);
 		return "redirect:/curvePoint/list";
 	}
 }
