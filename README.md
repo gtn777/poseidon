@@ -1,3 +1,9 @@
+## To test the app and connect to database,you need to entry username and password in application.properties file to access your poseidon database created and stored in mysql, complete lines in src/main/resources/application.properties as follow:
+spring.datasource.url=jdbc:mysql://localhost:3306/poseidon?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
+spring.datasource.username=myUserName <-- your mysql user name with privileges to access poseidon database 
+spring.datasource.password=myPassword <-- your mysql user password
+
+
 # spring-boot
 ## Technical:
 
