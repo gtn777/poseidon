@@ -40,8 +40,6 @@ import com.nnk.springboot.dto.RuleNameDto;
 import com.nnk.springboot.services.RuleNameService;
 import com.nnk.springboot.utilities.ObjectToMultivalueMap;
 
-import lombok.extern.slf4j.Slf4j;
-
 @WithMockUser
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebMvcTest(controllers = RuleNameController.class)
@@ -76,7 +74,7 @@ public class RuleNameControllerTest {
 	@After
 	public void afterEachVerif() {
 		verifyNoMoreInteractions(service);
-		
+
 	}
 
 	@Test

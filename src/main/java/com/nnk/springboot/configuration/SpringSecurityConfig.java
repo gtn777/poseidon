@@ -18,8 +18,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @EnableWebSecurity
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
-//	private static Logger logger = LoggerFactory.getLogger(SpringSecurityConfig.class);
-
 	@Autowired
 	private DataSource dataSource;
 
